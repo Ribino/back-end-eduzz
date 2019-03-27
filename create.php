@@ -1,4 +1,5 @@
 <?php include "template/header.php"; ?>
+<link rel="stylesheet" href="css/style.css" />
     <h2>Adiocinar uma postagem</h2>
 
     <form method="post">
@@ -14,27 +15,28 @@
         <style>
             label,
             textarea{
-                display: block;
-                margin: 5px 0;
-            }
+             display: block;
+             margin: 10px 0;
+             color : blue;
+            }       
         </style>
     </form>
     <?php 
         if(isset($_POST['submit'])){
             include "init.php";
+            include "banco_blog.php";
+
+
             $novo_post = array(
                 "TITULO" => $_POST['title'],
                 "AUTOR"  => $_POST['name'],
                 "CATEGORIA"     => $_POST['class'],
                 "TEXTO"       => $_POST['text']
             );
-         
-            $sql = 'INSERT INTO post (TITULO, AUTOR, CATEGORIA, TEXTO)
-               values ("'.$novo_post['TITULO'].'", "'.$novo_post['AUTOR'].'", "'.$novo_post['CATEGORIA'].'", "'.$novo_post['TEXTO'].'")';
-               
             
+            $inserir = adicionar($con, $novo_post);    
          
-            if ($con->query($sql) === TRUE)
+            if ($inserir)
                 echo "Dado inserido";
             else  
                 echo "Error: " . $sql . "<br>" . $con->error;
@@ -43,4 +45,5 @@
                 
     ?>
    
-    <a href="index.php">Back to home</a> 
+    <a href="index.php">Back to home</a>
+    <?php include "template/footer.php"; ?> 

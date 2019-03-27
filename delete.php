@@ -43,10 +43,12 @@ foreach($lista as $listar){
             <th scope="row"><?php echo $listar['AUTOR'] ?> </th>
             <th scope="row"><?php echo $listar['CATEGORIA'] ?> </th>
             <th>
-                <a href = "post.php?id=<?=$listar['id']?>">Ler Postagem</a>
+                <a href = "delete.php?id=<?=$listar['id']?>">Deletar</a>
         </tbody>
 <?php
 }
+
+
 
 ?>
 </table>

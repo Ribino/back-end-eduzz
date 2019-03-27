@@ -1,0 +1,19 @@
+header{
+    padding: 15px 20px;
+    background-color: beige;
+    height: 60px;
+}
+h1{
+    height: 5px;
+}
+li{
+    padding: 5px 1px;
+}
+
+tr{
+    background-color: rgb(88, 76, 57);
+}
+table{
+    border:1px solid #ccc; 
+    width: 100%;
+}

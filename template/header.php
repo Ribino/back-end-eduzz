@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -11,6 +11,8 @@
   </head>
 
   <body>
-    <h1>CRUD APP</h1>
-  </body>
-</html>
+    <header>
+      <h1>CRUD APP</h1>
+    </header>
+
+  
