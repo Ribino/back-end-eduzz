@@ -17,7 +17,6 @@
             textarea{
              display: block;
              margin: 10px 0;
-             color : blue;
             }       
         </style>
     </form>
@@ -37,7 +36,7 @@
             $inserir = adicionar($con, $novo_post);    
          
             if ($inserir)
-                echo "Dado inserido";
+                echo "<script>alert(\"Cadastrado com sucesso!\")</script>";
             else  
                 echo "Error: " . $sql . "<br>" . $con->error;
         }

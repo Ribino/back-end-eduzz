@@ -28,13 +28,14 @@
 include "init.php";
 include "banco_blog.php";
 
+
    
 if(isset($_POST['submit']))
     $pesquisa = $_POST['location'];
 else
     $pesquisa = null;    
     
-$lista = listar($con,$pesquisa);
+$lista = listar($con, $pesquisa, null);
 
 foreach($lista as $listar){
     ?>
@@ -43,13 +44,11 @@ foreach($lista as $listar){
             <th scope="row"><?php echo $listar['AUTOR'] ?> </th>
             <th scope="row"><?php echo $listar['CATEGORIA'] ?> </th>
             <th>
-                <a href = "delete.php?id=<?=$listar['id']?>">Deletar</a>
+                <a href="remove.php?id=<?=$listar['ID']?>" class="text-danger">Deletar</a> 
+            </th>
         </tbody>
 <?php
 }
-
-
-
 ?>
 </table>
 <a href="index.php">Back to home</a>

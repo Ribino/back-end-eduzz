@@ -34,7 +34,7 @@ if(isset($_POST['submit']))
 else
     $pesquisa = null;    
     
-$lista = listar($con,$pesquisa);
+$lista = listar($con,$pesquisa,null);
 
 foreach($lista as $listar){
     ?>
@@ -43,7 +43,7 @@ foreach($lista as $listar){
             <th scope="row"><?php echo $listar['AUTOR'] ?> </th>
             <th scope="row"><?php echo $listar['CATEGORIA'] ?> </th>
             <th>
-                <a href = "post.php?id=<?=$listar['id']?>">Ler Postagem</a>
+            <a href="update.php?id=<?=$listar['ID']?>" class="text-danger">Editar</a> 
         </tbody>
 <?php
 }
