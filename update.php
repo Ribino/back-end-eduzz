@@ -1,5 +1,4 @@
 <?php include "template/header.php"; ?>
-<link rel="stylesheet" href="css/style.css" />
 
 <h2>Editar postagem</h2>
 <?php
@@ -9,8 +8,6 @@
     $id = $_GET['id'];
     $lista = listar($con, null, $id);
 
-    $_POST['title'] =  $lista[0]['TITULO'];
-    // print_r($lista);
 ?>
 <form method="post">
     <label for="title">Titulo</label>
@@ -22,13 +19,7 @@
     <label for="text">Texto</label>
     <textarea type = "text" name = "text" id = "text" ><?php echo $lista[0]['TEXTO']?></textarea>
     <input type="submit" name = "submit" value = "Editar">
-    <style>
-        label,
-        textarea{
-            display: block;
-            margin: 10px 0;
-        }       
-    </style>
+
 </form>
 
 <?php
@@ -36,8 +27,8 @@
         $up_post = array(
             "TITULO" => $_POST['title'],
             "AUTOR"  => $_POST['name'],
-            "CATEGORIA"     => $_POST['class'],
-            "TEXTO"       => $_POST['text']
+            "CATEGORIA" => $_POST['class'],
+            "TEXTO"     => $_POST['text']
         );
         
         $atualizar = editar($con, $up_post, $id);    

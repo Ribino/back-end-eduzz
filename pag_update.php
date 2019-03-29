@@ -1,5 +1,5 @@
 <?php include "template/header.php"; ?>
-<link rel="stylesheet" href="css/style.css" />
+
 
 <h2>Listar postagens</h2>
 
@@ -9,20 +9,12 @@
 <input type="submit" name="submit" value="Filtrar">
 </form>
 <table>
-    <tr id = "cabecalho">
+    <tr id = "cabecalho-update">
         <th scope= "col" class = "text-center">Titulo</th>
         <th scope= "col" class = "text-center">Autor</th>
         <th scope= "col" class = "text-center">Categoria</th>
     </tr>
-<style>
-    #cabecalho{
-    background-color: blue;
-    }
-    table{
-    border:1px solid #ccc; 
-    width: 100%;
-    }
-</style>
+
 
 <?php 
 include "init.php";

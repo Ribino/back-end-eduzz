@@ -1,0 +1,30 @@
+header{
+    padding: 15px 20px;
+    background-color: beige;
+    height: 60px;
+}
+h1{
+    height: 5px;
+}
+li{
+    padding: 10px 1px;
+}
+table{
+    border:1px solid #ccc; 
+    width: 100%;
+    }
+#cabecalho-delete{
+    background-color: #b3b2b2;
+    }
+
+#cabecalho-read{
+    background-color: rgb(155, 155, 233);
+    }
+#cabecalho-update{
+    background-color: rgb(177, 228, 190);
+}
+label,
+textarea{
+     display: block;
+     margin: 10px 0;
+    }      

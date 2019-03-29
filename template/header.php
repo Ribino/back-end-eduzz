@@ -7,12 +7,12 @@
 
     <title>Projeto Eduzz</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/estilo.css" />
   </head>
 
   <body>
     <header>
-      <h1>CRUD APP</h1>
+      <h1>BLOG - CRUD APP</h1>
     </header>
 
   

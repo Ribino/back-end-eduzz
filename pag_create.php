@@ -1,5 +1,5 @@
 <?php include "template/header.php"; ?>
-<link rel="stylesheet" href="css/style.css" />
+
     <h2>Adiocinar uma postagem</h2>
 
     <form method="post">
@@ -12,13 +12,7 @@
     	<label for="text">Texto</label>
         <textarea type = "text" name = "text" id = "text"></textarea>
         <input type="submit" name = "submit" value = "Enviar">
-        <style>
-            label,
-            textarea{
-             display: block;
-             margin: 10px 0;
-            }       
-        </style>
+
     </form>
     <?php 
         if(isset($_POST['submit'])){

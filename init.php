@@ -1,7 +1,7 @@
 <?php 
     $servidor = "localhost";
     $usuario = "root";
-    $senha = "usbw";
+    $senha = "";
     $database = "blog";
     $con = mysqli_connect($servidor,$usuario,$senha,$database);
 
